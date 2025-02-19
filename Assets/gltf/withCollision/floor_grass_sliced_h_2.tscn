@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8x7ry7iq1hhr"]
+
+[ext_resource type="PackedScene" uid="uid://cht2slnh2ppse" path="res://Assets/gltf/floor_grass_sliced_H.gltf" id="1_loygx"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_v2j0v"]
+data = PackedVector3Array(1, -0.1, 1, 1, -0.0134, 0.95, 1, 0, 0.9, 1, -0.1, 1, 1, -0.05, 0.9866, 1, -0.0134, 0.95, -1, -0.1, 1, -1, -0.0134, 0.95, -1, -0.05, 0.9866, -1, -0.1, 1, -1, 0, 0.9, -1, -0.0134, 0.95, -1, -0.5, -1, 1, 0, -1, -1, 0, -1, -1, -0.5, -1, 1, -0.5, -1, 1, 0, -1, 1, -0.5, 1, -1, -0.1, 1, 1, -0.1, 1, 1, -0.5, 1, -1, -0.5, 1, -1, -0.1, 1, 1, 0, 0.9, -1, -0.0134, 0.95, -1, 0, 0.9, 1, 0, 0.9, 1, -0.0134, 0.95, -1, -0.0134, 0.95, 1, -0.0134, 0.95, -1, -0.05, 0.9866, -1, -0.0134, 0.95, 1, -0.0134, 0.95, 1, -0.05, 0.9866, -1, -0.05, 0.9866, 1, -0.05, 0.9866, -1, -0.1, 1, -1, -0.05, 0.9866, 1, -0.05, 0.9866, 1, -0.1, 1, -1, -0.1, 1, -1, 0, -1, 1, 0, 0.9, -1, 0, 0.9, -1, 0, -1, 1, 0, -1, 1, 0, 0.9, 1, -0.5, -1, 1, 0, 0.9, 1, 0, -1, 1, -0.5, -1, 1, -0.1, 1, 1, 0, 0.9, 1, -0.5, 1, 1, -0.1, 1, 1, -0.5, -1, -1, -0.1, 1, -1, 0, -1, -1, 0, 0.9, -1, -0.1, 1, -1, -0.5, -1, -1, 0, -1, -1, -0.5, 1, -1, -0.5, -1, -1, -0.1, 1, 1, -0.5, -1, -1, -0.5, 1, 1, -0.5, 1, 1, -0.5, -1, -1, -0.5, -1, -1, -0.5, 1)
+
+[node name="floor_grass_sliced_H2" instance=ExtResource("1_loygx")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor_grass_sliced_H" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor_grass_sliced_H/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_v2j0v")

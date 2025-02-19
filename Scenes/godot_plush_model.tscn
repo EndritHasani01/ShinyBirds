@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://c74e00xbynm3v"]
+
+[ext_resource type="PackedScene" uid="uid://dilpj72rf1x47" path="res://Assets/godot_plush_model/godot_plush_model.glb" id="1_0q2b3"]
+[ext_resource type="Texture2D" uid="uid://ba6okrcum4cut" path="res://Assets/godot_plush_model/godot_plush_albedo.png" id="2_88cxc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5s2cy"]
+albedo_texture = ExtResource("2_88cxc")
+
+[node name="godot_plush_model" instance=ExtResource("1_0q2b3")]
+
+[node name="GodotPlushMesh" parent="Rig/Skeleton3D" index="0"]
+material_override = SubResource("StandardMaterial3D_5s2cy")

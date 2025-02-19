@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://caesp1iynaph3"
+path="res://.godot/imported/fountain_leaves.obj-55edc23943a71634d92fcd76c7e02a4f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/fountain_leaves.obj-55edc23943a71634d92fcd76c7e02a4f.mesh"]
+
+source_file="res://Assets/obj/fountain_leaves.obj"
+dest_files=["res://.godot/imported/fountain_leaves.obj-55edc23943a71634d92fcd76c7e02a4f.mesh", "res://.godot/imported/fountain_leaves.obj-55edc23943a71634d92fcd76c7e02a4f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

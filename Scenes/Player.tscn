@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cs0pv8krdjr6v"]
+
+[ext_resource type="Script" path="res://Scenes/Player.gd" id="1_k57u8"]
+[ext_resource type="PackedScene" uid="uid://bxvqet4sxfdcu" path="res://Scenes/Godot_Player.tscn" id="2_pc3ln"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tqfh2"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_he7aa"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_k57u8")
+
+[node name="godot_plush_model" parent="." instance=ExtResource("2_pc3ln")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.951742, 0)
+shape = SubResource("CapsuleShape3D_tqfh2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+visible = false
+mesh = SubResource("CapsuleMesh_he7aa")
+
+[node name="CameraPivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.996307, -0.085869, 0, 0.085869, 0.996307, 0, 1.02718, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.544072, -4.734)
+spring_length = 2.0
+margin = 0.5
+
+[node name="ThirdPersonCamera" type="Camera3D" parent="CameraPivot/SpringArm3D"]
+transform = Transform3D(-1, 2.22045e-16, 8.74228e-08, 2.22045e-16, 1, 0, -8.74228e-08, 0, -1, 0, 0.000220537, -0.0156968)
